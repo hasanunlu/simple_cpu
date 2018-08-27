@@ -1,0 +1,70 @@
+0:  ADD  100 94 
+    CP    99 100
+
+2:  CP    90 89 //start address of numbers  
+    ADD   90 92 //j
+    CPI   88 90 //A[j]
+    ADDi  90  1 //j+1
+    CPI   87 90 //A[j+1] 
+    LT    87 88 //if(A[j+1]<A[j])
+    BZJ   86 87  
+ 
+    CPI   85 90 //temp=A[j+1]     
+    CPIi  90 88 //A[j+1]=A[j]
+    ADD   90 94 //j
+    CPIi  90 85 //A[j]=temp
+
+13: ADDi  92 1  //j++
+    CP    91 92 
+    LT    91 99 //j<i
+    ADD   91 94
+    BZJ   96 91
+
+    CP    92 95 //j=0 
+
+    ADD   99 94 //i--
+    CP    98 95 
+    LT    98 99 //i<0
+    ADD   98 94
+    BZJ   96 98
+    ADD   0  0
+
+84: 24 //while(1)
+85: 0 //temp
+86: 13 //next 
+87: 0 //temp  
+88: 0 //temp
+89: 101 //start address of numbers
+90: 0 //temp
+91: 0 //temp
+92: 0 //j
+93: 0x00000001
+94: 0xFFFFFFFF //for +(-1) 
+95: 0   //Zero value
+96: 2   //START ADDRESS
+97: 0   //temp
+98: 0   //temp
+99: 0   //i
+100: 18 //N(how many numbers are sorted?)
+101: 34 //1st number
+102: 12 //2nd number
+103: 9  //...
+104: 1 
+105: 80 
+106: 23 
+107: 39 
+108: 45 
+109: 2 
+110: 21
+111: 90
+112: 0
+113: 42
+114: 6
+115: 53
+116: 567
+117: 0
+118: 7
+119: 0x55565758
+
+
+
